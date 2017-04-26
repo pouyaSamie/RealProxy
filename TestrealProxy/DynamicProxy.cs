@@ -18,12 +18,7 @@ namespace TestrealProxy
         {
             this.decorated = decorated;
         }
-        //public static T Instance(T target) 
-        //{
-        //    return (T)(new DynamicProxy<T>(target)).GetTransparentProxy();
-
-        //}
-       
+        
         public event EventHandler<IMethodCallMessage> AfterExecute;
 
         public event EventHandler<IMethodCallMessage> BeforeExecute;
@@ -50,7 +45,7 @@ namespace TestrealProxy
 
         private void OnAfterExecute(IMethodCallMessage methodCall)
         {
-            Console.WriteLine("OnAfterExecute");
+            Console.WriteLine($"End of Execution {DateTime.Now.ToString("hh.mm.ss.fff")}");
             if (AfterExecute != null)
             {
                 var methodInfo = methodCall.MethodBase as MethodInfo;
@@ -60,7 +55,7 @@ namespace TestrealProxy
 
         private void OnBeforeExecute(IMethodCallMessage methodCall)
         {
-            Console.WriteLine("OnBeforeExecute");
+            Console.WriteLine($"Start of Execution {DateTime.Now.ToString("hh.mm.ss.fff")}");
             if (BeforeExecute != null)
             {
                 var methodInfo = methodCall.MethodBase as MethodInfo;

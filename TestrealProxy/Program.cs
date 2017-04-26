@@ -10,9 +10,11 @@ namespace TestrealProxy
     {
         static void Main(string[] args)
         {
-            var x= Factory.GetInstance<TestService>();
-            x.Add(10);
-            x.Delete();
+            // you should Always use Factory
+            var service= Factory.GetInstance<TestService>();
+
+            service.Add(10);
+            service.Delete();
             Console.ReadKey();
         }
     }
