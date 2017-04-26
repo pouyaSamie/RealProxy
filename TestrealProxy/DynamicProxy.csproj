@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{27E756EF-10A9-4F83-97B6-A832E19407E3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestrealProxy</RootNamespace>
-    <AssemblyName>TestrealProxy</AssemblyName>
+    <RootNamespace>DynamicProxy</RootNamespace>
+    <AssemblyName>DynamicProxy</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
